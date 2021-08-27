@@ -27,7 +27,7 @@ let phrases = [
     return arr[randIndex];
   }
   
-  let button = document.querySelector('.header-right');
+  let button = document.querySelector('.Home-card');
   let phrase = document.querySelector('.phrase');
   let advice = document.querySelector('.advice');
   let image = document.querySelector('.card-image');
