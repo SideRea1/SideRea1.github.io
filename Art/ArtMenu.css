@@ -277,11 +277,11 @@ flex-wrap: wrap;
 	text-align: center;
 }
 
-.note31{
+.note3{
 	width: 225px;
 	height: 340px;
 	color: rgb(255, 255, 255);
-	font-size: 11px;
+	font-size: 10.5px;
 	font-weight: 700;
 	border: 3px solid blanchedalmond;
 	padding: 5px;
@@ -291,15 +291,6 @@ flex-wrap: wrap;
 	margin: auto;
 	display: flex;
     align-items: flex-start;
-	text-align: center;
-}
-.note32{
-	padding: 5px;
-	color: rgb(255, 255, 255);
-	font-size: 11px;
-	margin: auto;
-	display: flex;
-    align-items: flex-end;
 	text-align: center;
 }
 
