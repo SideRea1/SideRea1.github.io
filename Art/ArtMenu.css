@@ -768,6 +768,26 @@ flex-wrap: wrap;
      box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6); 
 	margin: 20px 20px 20px 40px;
   }
+
+  .Home-card button{
+    color: rgb(52, 206, 168);
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    background-color: transparent;
+    margin: 5px;
+}
+
+.Home-card span{
+	color: violet;
+}
+
+.Home-card button:hover {
+    background-color: rgba(59, 230, 150, 0.1);
+}
   
 
   .cardTitle{
