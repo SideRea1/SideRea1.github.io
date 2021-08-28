@@ -2,7 +2,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: sans-serif;
 }
+
+
 
 body{
 	font: normal 16px sans-serif;
@@ -18,62 +21,68 @@ body .container{
 
 /*	Header	*/
 
-header{
-	display: flex; 
-	justify-content: space-between;
-	align-items: center;
-    position: fixed;
-	padding: 10px 40px;
-	color: rgb(100, 219, 130);
-	background-color: #805dd1;
+header {
+    height: 70px;
+    background-color: #805dd1;
+    padding: 10px 0;
+}
+.menu-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.menu-icon {
+    font-size: 2.3em;
+    color: palevioletred;
+    line-height: 50px;
+}
+nav {
+    position: absolute;
+    background-color: #3D4852;
+    top:70px;
+    left:0;
     width: 100%;
 }
+nav ul {
+    list-style-type: none;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+nav ul li {
+    padding: 0 15px;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 12px;
+    /* Add your custom styles below to change appearance of links */
+    text-decoration: none;
+    letter-spacing: 0.05em;
+	color: violet;
+	cursor: pointer;
+	font-weight: bold;
+}
+nav ul li a:hover, nav ul li a:focus {
+    color: #eb6f4a;
+}
+#checkbox {
+    display: none;
+}
+#checkbox:checked ~ nav ul {
+    max-height: 400px;
+    padding: 15px 0;
+    transition: all 0.5s;
+}
+
 
 .header-left{
 	font: normal 28px 'Fugaz One', cursive;
+	color: greenyellow;
 }
 
 .header-left span{
 	color: #f1ee09;
-}
-
-.header-center ul{
-	list-style: none;
-}
-
-.header-center ul li{
-	display: inline-block;
-	margin: 0 15px;
-}
-
-.header-center ul li a{
-	text-decoration: none;
-	color: violet;
-	cursor: pointer;
-	font-weight: bold;	
-}
-
-.header-center{
-	margin: auto;
-}
-
-.header-right button{
-    color: rgb(52, 206, 168);
-    cursor: pointer;
-    font-weight: 800;
-    text-transform: uppercase;
-    padding: 12px 30px;
-    border: 2px solid #ffffff;
-    border-radius: 4px;
-    background-color: transparent;
-}
-
-.header-right span{
-	color: violet;
-}
-
-.header-right button:hover {
-    background-color: rgba(59, 230, 150, 0.1);
+	font: normal 28px 'Fugaz One', cursive;
 }
 
 
@@ -86,14 +95,14 @@ header{
 	}
 
 	.hat{
-		padding: 100px 40px 10px 40px;
+		padding: 20px 40px 10px 40px;
 	}
 	.content{
-		padding: 100px 40px 10px 40px;
+		padding: 20px 40px 10px 40px;
 	}
 
 	.content2{
-		padding: 40px 40px 10px 40px;
+		padding: 20px 40px 10px 40px;
 	}
 
 	body {
@@ -104,9 +113,6 @@ header{
 		margin-bottom: 20px;
 	}
 
-	/* .frameEnd{
-		padding: 20px 40px 20px 40px;
-	} */
 }
 
 @media (max-width: 1200px){
@@ -115,14 +121,14 @@ header{
 	}
 
 	.hat{
-		padding: 100px 60px 10px 60px;
+		padding: 20px 60px 10px 60px;
 	}
 	.content{
-		padding: 100px 60px 10px 60px;
+		padding: 20px 60px 10px 60px;
 	}
 
 	.content2{
-		padding: 40px 60px 10px 60px;
+		padding: 20px 60px 10px 60px;
 	}
 
 	body {
@@ -146,15 +152,15 @@ header{
 	}
     
 	.hat{
-		padding: 200px 60px 10px 60px;
+		padding: 20px 60px 10px 60px;
 	}
     .content{
-    padding: 160px 60px 10px 60px;
+    padding: 20px 60px 10px 60px;
 	
     }
 
 	.content2{
-		padding: 40px 60px 10px 60px;
+		padding: 20px 60px 10px 60px;
 		}
 
 	header > div{
@@ -189,14 +195,14 @@ header{
 	
 
 	.hat{
-		padding:205px  40px 10px 40px;
+		padding:20px  40px 10px 40px;
 	}
 	.content{
-		padding:175px  40px 10px 40px;
+		padding:20px  40px 10px 40px;
 	}
 
 	.content2{
-		padding:40px  40px 10px 40px;
+		padding:20px  40px 10px 40px;
 	}
 
 	.text{
@@ -207,6 +213,27 @@ header{
        padding: 20px 40px 200px 40px;
 	}
 
+}
+
+@media (min-width: 1300px) { 
+
+    .menu-icon {
+		color: #805dd1;
+    }
+    nav {
+        position: relative;
+        top: -10px;
+        background-color: transparent;
+    }
+    nav ul {
+        max-height: 70px;
+        padding: 15px 0;
+        text-align: center;
+    }
+    nav ul li {
+        display: inline-flex;
+        padding-left: 20px;
+    }
 }
 
 
@@ -264,7 +291,7 @@ flex-wrap: wrap;
 	width: 225px;
 	height: 340px;
 	color: #ff6600;
-	font-size: 10.5px;
+	font-size: 12px;
 	font-weight: 700;
 	border: 3px solid blanchedalmond;
 	padding: 3px;
@@ -274,14 +301,14 @@ flex-wrap: wrap;
 	margin: auto;
 	display: flex;
     align-items: flex-start;
-	/* text-align: center; */
+	text-align: center;
 }
 
 .note3{
 	width: 225px;
 	height: 340px;
 	color: rgb(255, 255, 255);
-	font-size: 10.3px;
+	font-size: 11.8px;
 	font-weight: 700;
 	border: 3px solid blanchedalmond;
 	padding: 5px;
@@ -291,14 +318,14 @@ flex-wrap: wrap;
 	margin: auto;
 	display: flex;
     align-items: flex-start;
-	/* text-align: center; */
+	text-align: center;
 }
 
 .note4{
 	width: 225px;
 	height: 340px;
 	color: rgb(0, 0, 0);
-	font-size: 11px;
+	font-size: 12.2px;
 	font-weight: 700;
 	border: 3px solid blanchedalmond;
 	padding: 3px;
@@ -308,7 +335,7 @@ flex-wrap: wrap;
 	margin: auto;
 	display: flex;
     align-items: flex-start;
-	/* text-align: center; */
+	text-align: center;
 }
 .note5{
 	width: 225px;
@@ -495,72 +522,72 @@ flex-wrap: wrap;
 
 .card-content1{
 	background-color: bisque;
-	width: 230px;
-	height: 500px;
+	width: 200px;
+	height: 460px;
 	padding: 10px;
     float: right; 
      /* box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6);  */
-	margin: 0px 5px 10px 5px;
+	margin: 0px 0px 0px 10px;
 }
 
 .card-content2{
 	background-color: bisque;
-    width: 230px;
-	height: 500px;
+    width: 200px;
+	height: 460px;
 	padding: 10px;
     float: right; 
      /* box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6);  */
-	margin:0px 5px 10px 5px;
+	margin:0px 0px 0px 10px;
 }
 
 .card-content3{
 	background-color: bisque;
-    width: 230px;
-	height: 500px;
+    width: 200px;
+	height: 460px;
 	padding: 10px;
     float: right; 
      /* box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6);  */
-	margin:0px 5px 10px 5px;
+	margin:0px 0px 0px 10px;
 }
 
 .card-content4{
 	background-color: bisque;
-    width: 230px;
-	height: 500px;
+    width: 200px;
+	height: 460px;
 	padding: 10px;
     float: right; 
      /* box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6);  */
-	margin:0px 5px 10px 5px;
+	margin:0px 0px 0px 10px;
 }
 
 .card-content5{
 	background-color: bisque;
-    width: 230px;
-	height: 500px;
+    width: 200px;
+	height: 460px;
 	padding: 10px;
     float: right; 
      /* box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6);  */
-	margin:0px 5px 10px 5px;
+	margin:0px 0px 0px 10px;
 }
 
 .card-content6{
 	background-color: bisque;
-    width: 230px;
-	height: 500px;
+    width: 200px;
+	height: 460px;
 	padding: 10px;
     float: right; 
      /* box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6);  */
-	margin: 0px 5px 10px 5px;
+	margin: 0px 0px 10px 10px;
 }
 
 .card-content68{
 	background-color: bisque;
-    width: 230px;
-	height: 590px;
+    width: 200px;
+	height: 530px;
 	padding: 10px;
     float: right; 
      /* box-shadow: 7px 7px 5px rgba(202, 205, 212, 0.6);  */
-	margin: 0px 5px 10px 5px;
+	margin: 0px 0px 10px 10px;
 }
 
 .card-contentMiddle1{
